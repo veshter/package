@@ -1,0 +1,120 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-size: 80%;
+	font-family: "Trebuchet MS", "Helvetica", "Arial", "Verdana",
+		"sans-serif";
+	margin: 0;
+	padding: 0;
+}
+
+/* Site 
+        -------------------------------- */
+.tip {
+	font-size: 80%;
+}
+
+.wrapper {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.pseudohidden {
+	position: absolute;
+	top: 0px;
+	left: -5000px;
+}
+
+.printonly {
+	display: none;
+}
+
+#studioPage {
+	
+}
+
+#studioTitle {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+#studioStorage {
+	margin: 0;
+	padding: 0;
+	width: 150px;
+}
+
+#studioLeftNav {
+	float: left;
+	width: 190px;
+	margin: 0;
+}
+
+#studioContextNav {
+	float: right;
+}
+
+#studioContent {
+	margin-left: 190px;
+	margin-top: 0;
+}
+
+#studioFooter {
+	clear: both;
+	margin: 0;
+	padding: .5em;
+}
+
+@media print {
+	.webonly {
+		display: none;
+	}
+	.printonly {
+		display: block;
+	}
+	#studioContent {
+		margin-left: 0;
+		margin-top: 0;
+	}
+}
+
+/* AJAX related
+-------------------------------- */
+#loading {
+	width: 100px;
+	height: 30px;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -50px;
+	margin-left: -100px;
+	text-align: center;
+	padding: 10px;
+	font-size: 10px;
+	color: #808080;
+}
+
+/* Partial Overrides
+        -------------------------------- */
+.ui-focus {
+	border-style: dashed;
+	border-width: 5;
+	border-color: blue;
+}
+
+.ui-widget {
+	padding: 0px;
+	margin: 3px;
+}
+
+.ui-focus {
+	border-style: dashed;
+	border-width: 5;
+	border-color: blue;
+}
+
+.ui-dialog-page {
+	
+}

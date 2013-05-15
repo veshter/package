@@ -1,0 +1,49 @@
+# %LICENSE% - see LICENSE
+#
+# $Id: .htaccess.maintenance,v 1.1 2010-04-09 00:04:53 dkolev Exp $
+
+####################################
+# FOR DEBUGGING ONLY
+#php_flag display_errors on
+####################################
+
+####################################
+# PHP Specific
+
+# Configuration for PHP itself
+php_flag magic_quotes_gpc Off
+
+####################################
+
+####################################
+# VESHTER
+
+AddType application/x-httpd-php .vesh
+DirectoryIndex index.vesh index.php
+
+#use VESHTER for content rendition
+RewriteEngine on
+RewriteBase /
+
+#don't forward in some specific directories
+RewriteCond %{REQUEST_FILENAME} !^services
+RewriteCond %{REQUEST_FILENAME} !^static
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /gui.maintenence.php [L]
+
+####################################
+
+# Changelog:
+# $Log: .htaccess.maintenance,v $
+# Revision 1.1  2010-04-09 00:04:53  dkolev
+# Move
+#
+# Revision 1.1  2010-04-04 02:03:23  dkolev
+# *** empty log message ***
+#
+# Revision 1.1  2010-03-20 20:59:25  dkolev
+# Initial import
+#
+##
