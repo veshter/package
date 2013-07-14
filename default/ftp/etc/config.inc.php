@@ -6,7 +6,7 @@
  * $Id: config.inc.php,v 1.1 2010-04-09 00:04:53 dkolev Exp $
  */
 
-die('This web site is not configured properly');
+die('This web site is not configured properly. Change the settings in /etc/config.inc.php');
 
 //databse information this particular site
 define ('_DATASOURCE_HOST', 				'');
@@ -17,7 +17,7 @@ define ('_DATASOURCE_PASSWORD',	 			'');
 
 //database information for the defaults database
 define ('_DEFAULTSDATASOURCE_HOST', 		'');
-define ('_DEFAULTSDATASOURCE_TYPE',			'');
+define ('_DEFAULTSDATASOURCE_TYPE',			'MySQL');
 define ('_DEFAULTSDATASOURCE_NAME', 		'');
 define ('_DEFAULTSDATASOURCE_LOGIN', 		'');
 define ('_DEFAULTSDATASOURCE_PASSWORD', 	'');
