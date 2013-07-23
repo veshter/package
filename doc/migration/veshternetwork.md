@@ -7,9 +7,9 @@ _Note:_ If you wish to simply host your web site somewhere but not have to setup
 
 Required Software for hosting
 -----------------
-
 + Modern LAMP (Linux, Apache, MySQL, PHP) server.
-+ Web hosting for two MySQL databases
++ Web hosting with the ability to specify custom root folder (/content vs /)
++ Database hosting for two MySQL databases
 + [Google API license] (https://code.google.com/apis/console/)
 
 Recommended Software for development
@@ -17,7 +17,7 @@ Recommended Software for development
 + [HeidiSQL] (http://www.heidisql.com)
 + [PhpStorm] (http://www.jetbrains.com/phpstorm)
 
-Archive file
+Transition Archive file
 -----------------
 VESHTER transition files are a complete set of all asset and source files. Those files are compressed in one or more archive or [.rar] (http://www.rarlab.com) files in increments of 100 megabytes. For example a 300 megabytes of compressed data would be in three files. If there are two or more archive files, all of them have to downloaded and extracted.
 
@@ -43,7 +43,7 @@ Pre-Installation
 -----------------
 
 ### Google Authentication (OATH2) API
-Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. Record the Client ID, Client secret and API key. You will need them later in the installation.
+Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. Record the Client ID, Client secret and API key. You will need them in the configuration step.
 
 For Redirect URLs enter:
 + http://www.YOUR-DOMAIN-NAME.com/log.vesh?do=login
