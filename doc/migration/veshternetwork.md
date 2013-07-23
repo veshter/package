@@ -5,31 +5,34 @@ As part of the migration process away from VESHTER Network, the company issues a
 
 _Note:_ If you wish to simply host your web site somewhere but not have to setup the server and pre-requisite software, there are many inexpensive web hosting plans available on the Internet. For example, GoDaddy.
 
-Required Software
+Required Software for hosting
 -----------------
 
 + Modern LAMP (Linux, Apache, MySQL, PHP) server.
 + Web hosting for two MySQL databases
 + [Google API license] (https://code.google.com/apis/console/)
 
-Recommended Software (especially for further development)
+Recommended Software for development
 -----------------
 + [HeidiSQL] (http://www.heidisql.com)
 + [PhpStorm] (http://www.jetbrains.com/phpstorm)
 
-Archive File
+Archive file
 -----------------
 VESHTER transition files are a complete set of all asset and source files. Those files are compressed in one or more archive or [.rar] (http://www.rarlab.com) files in increments of 100 megabytes. For example a 300 megabytes of compressed data would be in three files. If there are two or more archive files, all of them have to downloaded and extracted.
 
 Once extracted, there will be three different folders available:
-+ Raw Assets - all raw/original at work or content that was original used to create the web site.
++ Raw assets - all raw/original at work or content that was original used to create the web site.
 + Database - content database at the time when the archive was created.
 + Package - script files required for the web site to function.
 
-Raw Assets
------------------
+### Raw assets
 Raw assets are not required for the web site to function; however, they can be useful if the site was being redesigned. Items such as Flash or PhotoShop files will be found there.
 
-Database
------------------
+### Database
+_Note:_ For general VESHTER software documentation, [click here] (../)
+
+The content database tables located in this folder need to be restored on the new server where the web site will be hosted. This content database works in conjuction with the [VESHTER Baseline database] (../../src/default/sql/base). 
+
+### Package
 _Note:_ For general VESHTER software documentation, [click here] (../)
