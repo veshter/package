@@ -95,7 +95,7 @@ INSERT INTO `config` (`guid`, `attribute`, `value`) VALUES
 </pre>
 
 + Open HeidiSQL or PhpMyAdmin and edit the "profile" table in the content database. Add your Google User ID as a super user. If you do not know what your Google User ID is, simply attempt to login and use the ID the error message
-  gives you. Google User IDs are numeric, they are not your email Gmail address. For example, 726535632130834122404
+  gives you. Google User IDs are numeric, they are not Gmail addresses. For example, 726535632130834122404
 
 <pre>
 INSERT INTO `profile` (`guid`, `su`, `login`, `status`) VALUES
