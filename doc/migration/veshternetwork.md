@@ -27,12 +27,52 @@ Once extracted, there will be three different folders available:
 + Package - script files required for the web site to function.
 
 ### Raw assets
-Raw assets are not required for the web site to function; however, they can be useful if the site was being redesigned. Items such as Flash or PhotoShop files will be found there.
+This folder contains any and all files used in the original creation of the site. Raw assets are not required for the web site to function; however, they can be useful if the site was being redesigned. Items such as Flash or PhotoShop files will be found there.
 
 ### Database
 _Note:_ For general VESHTER software documentation, [click here] (../)
 
-The content database tables located in this folder need to be restored on the new server where the web site will be hosted. This content database works in conjuction with the [VESHTER Baseline database] (../../src/default/sql/base). 
+This folder contains a snapshot of the content database table files located in this folder need to be restored on the new server where the web site will be hosted. This content database works in conjunction with the [VESHTER Baseline database] (../../src/default/sql/base).
 
 ### Package
 _Note:_ For general VESHTER software documentation, [click here] (../)
+
+This folder contains a snapshot of all scripts necessary for the web site to function. They are not updated to [the latest version due to a risk of potentially losing custom functionality. You are free to update the package files from [framework] (https://github.com/veshter/framework/tree/master/src) or [package] (../../src/) at your own risk.
+
+Pre-Installation
+-----------------
+
+### Google Authentication (OATH2) API
+Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. Record the Client ID, Client secret and API key. You will need them later in the installation.
+
+For Redirect URLs enter:
++ http://www.YOUR-DOMAIN-NAME.com/log.vesh?do=login
++ http://YOUR-DOMAIN-NAME.com/log.vesh?do=login
+If you use SSL, specify the SSL schema.
+
+Installation
+-----------------
++ Extract the archive
++ Restore the content database on the new database server.
+Keep in mind, the content database files are MySQL table files not .sql scripts.
++ Create a read/write MySQL user for the content database for the site to use as well as for administrative purposes (i.e. for HeidiSQL or PhpMyAdmin)
++ Download the [baseline database] (../../src/default/sql/base) .sql files and run them inside a new/empty database
++ Create a read/write MySQL user for the baseline database __for administrative purposes only__ (i.e. for HeidiSQL or
+ PhpMyAdmin)
++ Create a read-only (or read/write if read-only is not an option) user for the baseline database for the site to use.
++ Upload the contents of the package folder to your new web server.
+Your web site has to point to the /content package folder and __not__ /, otherwise virtual paths will not work.
+
+Configuration
+-----------------
++ Navigate to /etc/ folder and edit config.inc.php. For the _DATASOURCE constants, specify the server and credential information for the content database. For the _DEFAULTSDATASOURCE, specify the server and credential information for the baseline database.
++ Ensure connectivity between the web site and the database server.
++ Create a Google API services account and record the
++ Open HeidiSQL or PhpMyAdmin and edit the config table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
++ site.auth.clientid should be set to Google App Client ID
++ site.auth.clientsecret should be set to Google App Client Secret
++ site.auth.developerkey should be set to Google App API key
+
+
+
+
