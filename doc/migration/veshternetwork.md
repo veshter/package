@@ -70,10 +70,21 @@ Configuration
 + Navigate to /etc/ folder and edit config.inc.php. For the _DATASOURCE constants, specify the server and credential information for the content database. For the _DEFAULTSDATASOURCE, specify the server and credential information for the baseline database.
 + Ensure connectivity between the web site and the database server.
 + Create a Google API services account and record the
-+ Open HeidiSQL or PhpMyAdmin and edit the config table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
-++ site.auth.clientid should be set to Google App Client ID
-++ site.auth.clientsecret should be set to Google App Client Secret
-++ site.auth.developerkey should be set to Google App API key
++ Open HeidiSQL or PhpMyAdmin and edit the "config" table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
+
+<code lang="mysql">
+INSERT INTO `config` (`guid`, `attribute`, `value`) VALUES
+	('35EE3D8C56730121699184046EE68F02', 'site.auth.clientsecret', 'h9j4cwQhWuKuo-qMYs8INe_x'),
+	('35EE3D8C56730121699184046EE68F03', 'site.auth.developerkey', 'AIzaSyD0FCFxyU8gyswUlLmEoXjtT9-CKNbyZdA');
+</code>
+
++ Set site.auth.clientid to Google App Client ID
++ Set site.auth.clientsecret to Google App Client Secret
++ Set site.auth.developerkey to Google App API key
+
+Summary
+-----------------
+
 
 
 
