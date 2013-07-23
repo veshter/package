@@ -48,7 +48,9 @@ Visit the [Google Console] (https://code.google.com/apis/console) using a generi
 For Redirect URLs enter:
 + http://www.YOUR-DOMAIN-NAME.com/log.vesh?do=login
 + http://YOUR-DOMAIN-NAME.com/log.vesh?do=login
+
 If you use SSL, specify the SSL schema.
+If you have a staging web site address, enter it as well. Do not forget to end the address with /log.vesh?do=login
 
 Installation
 -----------------
@@ -69,9 +71,9 @@ Configuration
 + Ensure connectivity between the web site and the database server.
 + Create a Google API services account and record the
 + Open HeidiSQL or PhpMyAdmin and edit the config table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
-+ site.auth.clientid should be set to Google App Client ID
-+ site.auth.clientsecret should be set to Google App Client Secret
-+ site.auth.developerkey should be set to Google App API key
+++ site.auth.clientid should be set to Google App Client ID
+++ site.auth.clientsecret should be set to Google App Client Secret
+++ site.auth.developerkey should be set to Google App API key
 
 
 
