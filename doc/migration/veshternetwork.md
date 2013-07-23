@@ -68,18 +68,32 @@ Your web site has to point to the /content package folder and __not__ /, otherwi
 Configuration
 -----------------
 + Navigate to /etc/ folder and edit config.inc.php. For the _DATASOURCE constants, specify the server and credential information for the content database. For the _DEFAULTSDATASOURCE, specify the server and credential information for the baseline database.
+
+<pre>
+define ('_DATASOURCE_HOST', 				'');
+define ('_DATASOURCE_TYPE',					'MySQL');
+define ('_DATASOURCE_NAME', 				'');
+define ('_DATASOURCE_LOGIN', 				'');
+define ('_DATASOURCE_PASSWORD',	 			'');
+
+//database information for the defaults database
+define ('_DEFAULTSDATASOURCE_HOST', 		'');
+define ('_DEFAULTSDATASOURCE_TYPE',			'MySQL');
+define ('_DEFAULTSDATASOURCE_NAME', 		'');
+define ('_DEFAULTSDATASOURCE_LOGIN', 		'');
+define ('_DEFAULTSDATASOURCE_PASSWORD', 	'');
+</pre>
+
 + Ensure connectivity between the web site and the database server.
 + Create a Google API services account and record the
 + Open HeidiSQL or PhpMyAdmin and edit the "config" table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
 
-<code class="sql">
 <pre>
 INSERT INTO `config` (`guid`, `attribute`, `value`) VALUES
     ('35EE3D8C56730121699184046EE68F01', 'site.auth.clientid', 'CLIENTIDHERE'),
 	('35EE3D8C56730121699184046EE68F02', 'site.auth.clientsecret', 'CLIENTSECRETHERE'),
 	('35EE3D8C56730121699184046EE68F03', 'site.auth.developerkey', 'APIKEYHERE');
 </pre>
-</code>
 
 + Set site.auth.clientid to Google App Client ID
 + Set site.auth.clientsecret to Google App Client Secret
