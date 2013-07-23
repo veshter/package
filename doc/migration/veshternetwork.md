@@ -73,9 +73,12 @@ Configuration
 + Open HeidiSQL or PhpMyAdmin and edit the "config" table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
 
 <code class="sql">
+<pre>
 INSERT INTO `config` (`guid`, `attribute`, `value`) VALUES
-	('35EE3D8C56730121699184046EE68F02', 'site.auth.clientsecret', 'h9j4cwQhWuKuo-qMYs8INe_x'),
-	('35EE3D8C56730121699184046EE68F03', 'site.auth.developerkey', 'AIzaSyD0FCFxyU8gyswUlLmEoXjtT9-CKNbyZdA');
+    ('35EE3D8C56730121699184046EE68F01', 'site.auth.clientid', 'CLIENTIDHERE'),
+	('35EE3D8C56730121699184046EE68F02', 'site.auth.clientsecret', 'CLIENTSECRETHERE'),
+	('35EE3D8C56730121699184046EE68F03', 'site.auth.developerkey', 'APIKEYHERE');
+</pre>
 </code>
 
 + Set site.auth.clientid to Google App Client ID
