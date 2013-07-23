@@ -85,23 +85,18 @@ define ('_DEFAULTSDATASOURCE_PASSWORD', 	'');
 </pre>
 
 + Ensure connectivity between the web site and the database server.
-+ Create a Google API services account and record the
-+ Open HeidiSQL or PhpMyAdmin and edit the "config" table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them.
++ Open HeidiSQL or PhpMyAdmin and edit the "config" table of the content database. Find the entries for site.auth.clientid, site.auth.clientsecret and site.auth.developerkey. If they don't exist, create them. Set their values to the Google web application client ID.
 
 <pre>
 INSERT INTO `config` (`guid`, `attribute`, `value`) VALUES
-    ('35EE3D8C56730121699184046EE68F01', 'site.auth.clientid', 'CLIENTIDHERE'),
-	('35EE3D8C56730121699184046EE68F02', 'site.auth.clientsecret', 'CLIENTSECRETHERE'),
-	('35EE3D8C56730121699184046EE68F03', 'site.auth.developerkey', 'APIKEYHERE');
+    ('35EE3D8C56730121699184046EE68F01', 'site.auth.clientid', ''),
+	('35EE3D8C56730121699184046EE68F02', 'site.auth.clientsecret', ''),
+	('35EE3D8C56730121699184046EE68F03', 'site.auth.developerkey', '');
 </pre>
-
-+ Set site.auth.clientid to Google App Client ID
-+ Set site.auth.clientsecret to Google App Client Secret
-+ Set site.auth.developerkey to Google App API key
 
 Summary
 -----------------
-
+At this point, your site should be operational and ready to test.
 
 
 
