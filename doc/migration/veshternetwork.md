@@ -17,11 +17,19 @@ Recommended Software (especially for further development)
 + [HeidiSQL] (http://www.heidisql.com)
 + [PhpStorm] (http://www.jetbrains.com/phpstorm)
 
-Transition
+Archive File
 -----------------
-VESHTER transition files are a complete set of all asset and source files. Those files are comperesed in one or more archive or [.rar] (http://www.rarlab.com) files in increments of 100 megabytes. For example a 300 megabytes of compressed data would be in three files. If there are two or more archive files, all of them have to downloaded and extracted.
+VESHTER transition files are a complete set of all asset and source files. Those files are compressed in one or more archive or [.rar] (http://www.rarlab.com) files in increments of 100 megabytes. For example a 300 megabytes of compressed data would be in three files. If there are two or more archive files, all of them have to downloaded and extracted.
 
 Once extracted, there will be three different folders available:
 + Raw Assets - all raw/original at work or content that was original used to create the web site.
 + Database - content database at the time when the archive was created.
 + Package - script files required for the web site to function.
+
+Raw Assets
+-----------------
+Raw assets are not required for the web site to function; however, they can be useful if the site was being redesigned. Items such as Flash or PhotoShop files will be found there.
+
+Database
+-----------------
+_Note:_ For general VESHTER software documentation, [click here] (../)
