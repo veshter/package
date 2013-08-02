@@ -55,7 +55,13 @@ Where YOUR-DOMAIN-NAME.com is your domain name. If you use SSL, specify the SSL 
 
 Finally click on Create client ID.
 
-Record the Client ID, Client secret and API key. You will need them in the configuration step.
+There are no additional Google services required to use Google Authentication; however,
+Google API Terms of Use have to be agreed to. Click on Services and choose any service (Admin SDK for example). Click
+ on to toggle from Off to On. You will be prompted to read and accept to Google Terms of Use. Read and agree to both.
+  When you are done. You should see the Services screen again. Toggle the Admin SDK back to Off.
+
+Click on API Access. You should now see a section called Simple API Access. Record the Client ID,
+Client secret and API key. You will need them in the configuration step.
 
 Installation
 -----------------
