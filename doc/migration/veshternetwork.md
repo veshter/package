@@ -45,7 +45,8 @@ Pre-Installation
 ### Google Authentication (OATH2) API
 _Note:_ These instructions are based on the Goodle Console UI as of 8/2/2013. As time goes by, the UI may change. 
 
-Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. This will allow your web site to authenticate users based on their Google IDs and thus freeing you from the responsibility to storing people's passwords on your site. Click on API access, Create a new OATH2.0 client and enter a project name. A project name can be "Your Site Single Signon". Click Next. Select Web Application. If not already visible, select (more options) next to Your Site or hostname.
+Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. This will allow your web site to authenticate users based on their Google IDs and thus freeing you from the responsibility to storing people's passwords on your site. Click on API access, Create a new OATH2.0 client and enter a project name. A project name can be "Your Site Single Signon". You can enter branding information if you like or brand later. Click Next. Select Web Application. If not already visible,
+select (more options) next to Your Site or hostname.
 
 For Authorized Redirect URLs enter:
 + http://www.YOUR-DOMAIN-NAME.com/log.vesh?do=login
@@ -58,7 +59,7 @@ Finally click on Create client ID.
 There are no additional Google services required to use Google Authentication; however,
 Google API Terms of Use have to be agreed to. Click on Services and choose any service (Admin SDK for example). Click
  on to toggle from Off to On. You will be prompted to read and accept to Google Terms of Use. Read and agree to both.
-  When you are done. You should see the Services screen again. Toggle the Admin SDK back to Off.
+  When you are done, you should see the Services screen again. Toggle the Admin SDK back to Off.
 
 Click on API Access. You should now see a section called Simple API Access. Record the Client ID,
 Client secret and API key. You will need them in the configuration step.
