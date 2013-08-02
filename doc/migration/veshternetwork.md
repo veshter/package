@@ -43,14 +43,15 @@ Pre-Installation
 -----------------
 
 ### Google Authentication (OATH2) API
-Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. Record the Client ID, Client secret and API key. You will need them in the configuration step.
+Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. This will allow your web site to authenticate users based on their Google IDs and thus freeing you from the responsibility to storing people's passwords on your site. Click on API access, Create a new OATH2.0 client and enter a project name. A project name can be "Your Site Single Signon". Click Next. Select Web Application. If not already visible, select (more options) next to Your Site or hostname.
 
-For Redirect URLs enter:
+For Authorized Redirect URLs enter:
 + http://www.YOUR-DOMAIN-NAME.com/log.vesh?do=login
 + http://YOUR-DOMAIN-NAME.com/log.vesh?do=login
++ 
+Where YOUR-DOMAIN-NAME.com is your domain name. If you use SSL, specify the SSL schema. If you have a staging web site address, enter it as well. Do not forget to end the address with /log.vesh?do=login
 
-If you use SSL, specify the SSL schema.
-If you have a staging web site address, enter it as well. Do not forget to end the address with /log.vesh?do=login
+Record the Client ID, Client secret and API key. You will need them in the configuration step.
 
 Installation
 -----------------
