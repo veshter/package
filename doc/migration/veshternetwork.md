@@ -43,7 +43,7 @@ Pre-Installation
 -----------------
 
 ### Google Authentication (OATH2) API
-_Note:_ Thes instructions are based on the Goodle Console UI as of 8/2/2013. As time goes by the UI may change. 
+_Note:_ These instructions are based on the Goodle Console UI as of 8/2/2013. As time goes by, the UI may change. 
 
 Visit the [Google Console] (https://code.google.com/apis/console) using a generic account (preferably only used for this web site) and then create a new web application client ID. This will allow your web site to authenticate users based on their Google IDs and thus freeing you from the responsibility to storing people's passwords on your site. Click on API access, Create a new OATH2.0 client and enter a project name. A project name can be "Your Site Single Signon". Click Next. Select Web Application. If not already visible, select (more options) next to Your Site or hostname.
 
