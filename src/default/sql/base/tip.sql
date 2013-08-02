@@ -23,9 +23,6 @@ CREATE TABLE IF NOT EXISTS `tip` (
 
 -- Dumping data for table vdbgsbwc.tip: 2 rows
 /*!40000 ALTER TABLE `tip` DISABLE KEYS */;
-INSERT INTO `tip` (`guid`, `realm`, `category`, `workgroup`, `title`, `description`) VALUES
-	('AE333D1C6BE8CFF723B4E813A83BD5AC', 'administrator', 'Quips', 'admin', 'You can request support at any time by clicking on the Support section.', NULL),
-	('084A67EE008FDEDAF64CF1FE343EA6A5', 'administrator', 'Quips', 'admin', 'VESHTER tools can be as flexible as you need them to be. Contact your account representative for more information. ', NULL);
 /*!40000 ALTER TABLE `tip` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
