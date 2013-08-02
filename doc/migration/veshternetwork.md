@@ -104,8 +104,10 @@ INSERT INTO `config` (`guid`, `attribute`, `value`) VALUES
 
 <pre>
 INSERT INTO `profile` (`guid`, `su`, `login`, `status`) VALUES
-	('10A677D53439719BC0AC34D9B28E06C7', 'yes', 'YOURGOOGLEIDHERE', 'active');
+	('10A677D53439719BC0AC34D9B28E06C7', 'yes', 'eid-YOURGOOGLEIDHERE', 'active');
 </pre>
+
+Note that Google User IDs are numeric and eid- (or _e_xternal _id_entifier) is a prefix enforced by VESHTER. When entering accounts be sure to always specify the prefix or users will not be able to login.
 
 Summary
 -----------------
