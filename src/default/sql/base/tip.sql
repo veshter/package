@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `tip` (
   PRIMARY KEY  (`guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
--- Dumping data for table vdbgsbwc.tip: 2 rows
+-- Dumping data for table vdbgsbwc.tip: 0 rows
 /*!40000 ALTER TABLE `tip` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tip` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
